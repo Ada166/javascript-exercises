@@ -1,16 +1,15 @@
-const sumAll = function(start, end) {
-    start = Math.min(start, end) * 1;
-    end = Math.max(start, end) * 1;
-    if (typeof start !== 'number' || typeof end !== 'number') {
-        return 'ERROR';
+const sumAll = function(a, b) {
+    if (typeof a !== "number" || typeof b !== "number") return "ERROR";
+    if (!Number.isInteger(a) || !Number.isInteger(b)) return "ERROR";
+    if (a < 0 || b < 0) return "ERROR";
+        let min = Math.min(a, b);
+        let max = Math.max(a, b);
+        let sum = 0;
+    for (let j = min; j <= max; j++) {
+        sum = sum + j;
     }
-    if (Number.isInteger(start) && Number.isInteger(end) && start >= 0 && end >= 0) {
-        let sumAll = 0;
-        for (let i = start; i <= end; i++) {
-            sumAll += i;
-        }
-        return sumAll;
-    } 
-};
+    return sum;
+
+}
 
 module.exports = sumAll;
