@@ -19,7 +19,4 @@ module.exports = leapYears;
 
 //Create function 
 //Need to create if statements for number of years to be divided by 4
-//Loop thru the years and only accept every 4 years
-
 //Leap years need to be divisible by 4 and 400
-//
