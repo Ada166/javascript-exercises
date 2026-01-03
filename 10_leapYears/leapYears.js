@@ -1,6 +1,25 @@
-const leapYears = function() {
-
+const leapYears = function(number) {
+    let isLeap = false;
+    if (number % 4 === 0) {
+        isLeap = true;
+        if (number % 100 === 0) {
+            isLeap = false;
+            if (number % 400 === 0) {
+                isLeap = true;
+            }
+        }
+    }
+    return isLeap;
 };
 
-// Do not edit below this line
 module.exports = leapYears;
+
+
+
+
+//Create function 
+//Need to create if statements for number of years to be divided by 4
+//Loop thru the years and only accept every 4 years
+
+//Leap years need to be divisible by 4 and 400
+//
