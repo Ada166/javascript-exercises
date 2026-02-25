@@ -1,7 +1,11 @@
 const fibonacci = function(num) {
-    if (typeof n2 === 'string') {
-        return n2;
-    }
+   num = Number(num);
+   if (isNaN(num) || num < 0) {
+    return "OOPS";
+   }
+
+   if (num === 0) return 0;
+   if (num === 1) return 1;
     let n1 = 0;
     let n2 = 1;
     let sum;
